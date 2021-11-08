@@ -12,10 +12,13 @@ def create_app() -> Flask:
     app.config.from_mapping(
         SECRET_KEY="hands_on_flask-sock_package",
     )
-    
+
     @app.route("/test")
     def test():
         return "Flask server running."
 
+    # Import the module containing websocket routes
+    import main.ws
     sock.init_app(app)
+
     return app
