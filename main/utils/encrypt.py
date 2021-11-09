@@ -1,7 +1,7 @@
 """File with methods for encryption"""
 
 
-def caesor_cipher(text: str, step: int) -> str:
+def caesar_cipher(text: str, step: int) -> str:
     encrypt = ""
 
     for letter in text:
